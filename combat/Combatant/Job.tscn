@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://diqokvm61tmcu"]
+
+[ext_resource type="Script" path="res://combat/Combatant/job.gd" id="1_p64qs"]
+[ext_resource type="Script" path="res://combat/Combatant/CharacterStats.gd" id="2_hku44"]
+
+[node name="Job" type="Node"]
+script = ExtResource("1_p64qs")
+
+[node name="Stats" type="Node" parent="."]
+script = ExtResource("2_hku44")
+
+[node name="Skills" type="Node" parent="."]

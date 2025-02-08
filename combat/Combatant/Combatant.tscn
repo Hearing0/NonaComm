@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://6s32flmvj18r"]
+
+[ext_resource type="PackedScene" uid="uid://diqokvm61tmcu" path="res://combat/Combatant/Job.tscn" id="1_tghuc"]
+
+[node name="Combatant" type="Marker2D"]
+
+[node name="Skin" type="Marker2D" parent="."]
+
+[node name="CombatantAnim" type="Marker2D" parent="Skin"]
+
+[node name="Job" parent="." instance=ExtResource("1_tghuc")]
+
+[node name="Actions" type="Node" parent="."]
+
+[node name="Attack" type="Node" parent="Actions"]
+
+[node name="InterfaceAnchor" type="RemoteTransform2D" parent="."]
+
+[node name="TargetAnchor" type="Marker2D" parent="."]
