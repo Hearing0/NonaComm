@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://boqas6b3xxo74"]
+
+[ext_resource type="Script" path="res://combat/Combatant/combatant_tile.gd" id="1_py2l6"]
+[ext_resource type="Texture2D" uid="uid://x34esjqcjy5" path="res://assets/Combantant.basic.png" id="2_er1tx"]
+
+[node name="CombatantTile" type="Area2D"]
+script = ExtResource("1_py2l6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_er1tx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
