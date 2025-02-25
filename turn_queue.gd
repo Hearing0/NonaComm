@@ -12,5 +12,5 @@ func play_turn():
 	var new_idx : int = (active_character.get_index() + 1) % get_child_count()
 	active_character = get_child(new_idx)
 
-static func compare_combatant_speed(a : Combatant, b : Combatant) -> bool:
-	return  > 
+#static func compare_combatant_speed(a : Combatant, b : Combatant) -> bool:
+	#return  > 

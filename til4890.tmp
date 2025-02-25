@@ -1,9 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://dywn3kmk5qhsm"]
+[gd_scene load_steps=6 format=3 uid="uid://dywn3kmk5qhsm"]
 
 [ext_resource type="Texture2D" uid="uid://c7q66uahdxeiu" path="res://assets/hex_grid.png" id="1_6whmm"]
 [ext_resource type="Script" path="res://tile_map_controller.gd" id="2_h4yrn"]
 [ext_resource type="Script" path="res://combatant_tile.gd" id="3_getey"]
-[ext_resource type="Texture2D" uid="uid://x34esjqcjy5" path="res://assets/Combantant.basic.png" id="4_gyytk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xeep1"]
 texture = ExtResource("1_6whmm")
@@ -12,11 +11,9 @@ separation = Vector2i(18, 0)
 texture_region_size = Vector2i(110, 96)
 0:0/next_alternative_id = 2
 0:0/0 = 0
-0:0/0/custom_data_0 = true
 0:0/1 = 1
 0:0/1/modulate = Color(0.0862745, 1, 0.54902, 1)
 1:0/0 = 0
-1:0/0/custom_data_0 = true
 2:0/next_alternative_id = 4
 2:0/0 = 0
 2:0/1 = 1
@@ -29,14 +26,8 @@ texture_region_size = Vector2i(110, 96)
 [sub_resource type="TileSet" id="TileSet_7nbpl"]
 tile_shape = 3
 tile_offset_axis = 1
-tile_size = Vector2i(110, 96)
-custom_data_layer_0/name = "solid"
-custom_data_layer_0/type = 1
+tile_size = Vector2i(102, 94)
 sources/0 = SubResource("TileSetAtlasSource_xeep1")
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_x0m6r"]
-atlas = ExtResource("4_gyytk")
-region = Rect2(24, 24, 64, 64)
 
 [node name="TileMap" type="TileMap"]
 position = Vector2(80, 90)
@@ -46,9 +37,6 @@ layer_0/tile_data = PackedInt32Array(0, 131072, 0, 65537, 65536, 0, 131073, 6553
 script = ExtResource("2_h4yrn")
 
 [node name="CombatantTile" type="Node2D" parent="."]
-position = Vector2(52, 45)
 script = ExtResource("3_getey")
 
 [node name="Sprite2D" type="Sprite2D" parent="CombatantTile"]
-position = Vector2(-1, 1)
-texture = SubResource("AtlasTexture_x0m6r")

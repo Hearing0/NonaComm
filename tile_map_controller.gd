@@ -14,7 +14,9 @@ func _input(event):
 		if event.button_index == MOUSE_BUTTON_LEFT and event.is_pressed():
 			var global_clicked = event.position
 			var pos_clicked = local_to_map(to_local(global_clicked))
-			print(pos_clicked)
+			print("map pos: ",pos_clicked)
+			#print("local pos: ",to_local(global_clicked))
+			#print("global pos: ", global_clicked)
 			
 			# Check if unit is being deselected
 			if selected_unit != null:
